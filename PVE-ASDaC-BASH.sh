@@ -50,7 +50,7 @@ declare -A config_base=(
     [create_linked_clones]=false
 
     [_access_create]='Создавать пользователей, группы, роли для разграничения доступа'
-    [access_create]=true
+    [access_create]=false
 
     [_access_user_name]='Шаблон имени пользователя стенда'
     [_def_access_user_name]='Шаблон имени пользователя стенда по умолчанию'
@@ -60,7 +60,7 @@ declare -A config_base=(
     [access_user_desc]='Учетная запись участника демэкзамена #{0}'
 
     [_access_user_enable]='Включить учетные записи участников сразу после развертывания стендов'
-    [access_user_enable]=true
+    [access_user_enable]=false
 
     [_access_pass_length]='Длина создаваемых паролей для пользователей'
     [access_pass_length]=5
