@@ -20,7 +20,7 @@ config_templates[Alt-JeOS]='
         cpu         = host
         cores       = 1
         memory      = 1024
-        boot_disk_0 = /root/PVE_IMG/Alt-p11_Jeos-systemd.qcow2
+        boot_disk_0 = /root/PVE_IMG/PVE_IMG/Alt-p11_Jeos-systemd.qcow2
 '
 config_templates[Alt-Server_10.1]='
         templ_descr = Базовый шаблон для Альт Сервер 10.1
@@ -34,7 +34,7 @@ config_templates[Alt-Server_10.1]='
         cpu         = host
         cores       = 1
         memory      = 2048
-        boot_disk_0 = /root/PVE_IMG/Alt-Server_10.1.qcow2
+        boot_disk_0 = /root/PVE_IMG/PVE_IMG/Alt-Server_10.1.qcow2
 '
 config_templates[Alt-Workstation_10.1]='
         templ_descr = Базовый шаблон для Альт Рабочая Станция 10.1
@@ -47,7 +47,7 @@ config_templates[Alt-Workstation_10.1]='
         cpu         = host
         cores       = 2
         memory      = 3072
-        boot_disk_0 = /root/PVE_IMG/Alt-Workstation_10.1.qcow2
+        boot_disk_0 = /root/PVE_IMG/PVE_IMG/Alt-Workstation_10.1.qcow2
 '
 
 
@@ -124,7 +124,7 @@ config_stand_2_var[vm_1]='
         network_1       = { bridge=inet, firewall=1 }
         network_2       = : ISP-HQ
         network_3       = : ISP-BR
-        boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/ISP_DE39-2025_M2.qcow2
+        boot_disk_0     = /root/PVE_IMG/PVE_IMG/DE39-2025_M2/ISP_DE39-2025_M2.qcow2
 '
 config_stand_2_var[vm_2]='
         name            = HQ-RTR
@@ -132,14 +132,14 @@ config_stand_2_var[vm_2]='
         startup         = order=2,up=8,down=20
         network_1       = : ISP-HQ
         network_2       = : HQ-Net
-        boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/HQ-RTR_ALT_DE39-2025_M2.qcow2
+        boot_disk_0     = /root/PVE_IMG/PVE_IMG/DE39-2025_M2/HQ-RTR_DE39-2025_M2.qcow2
 '
 config_stand_2_var[vm_3]='
         name            = HQ-SRV
         config_template = Alt-Server_10.1
         startup         = order=3,up=8,down=30
         network_1       = {bridge=": HQ-Net", tag=100}
-        boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/HQ-SRV_DE39-2025_M2.qcow2
+        boot_disk_0     = /root/PVE_IMG/PVE_IMG/DE39-2025_M2/HQ-SRV_DE39-2025_M2.qcow2
         disk_1          = 1 GB
         disk_2          = 1 GB
         disk_3          = 1 GB
@@ -149,7 +149,7 @@ config_stand_2_var[vm_4]='
         config_template = Alt-Workstation_10.1
         startup         = order=4,up=8,down=30
         network_1       = {bridge=": HQ-Net", tag=200}
-        boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/HQ-CLI_DE39-2025_M2.qcow2
+        boot_disk_0     = /root/PVE_IMG/PVE_IMG/DE39-2025_M2/HQ-CLI_DE39-2025_M2.qcow2
 '
 config_stand_2_var[vm_5]='
         name            = BR-RTR
@@ -157,14 +157,14 @@ config_stand_2_var[vm_5]='
         startup         = order=2,up=8,down=20
         network_1       = : ISP-BR
         network_2       = : BR-Net
-        boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/BR-RTR_ALT_DE39-2025_M2.qcow2
+        boot_disk_0     = /root/PVE_IMG/PVE_IMG/DE39-2025_M2/BR-RTR_ALT_DE39-2025_M2.qcow2
 '
 config_stand_2_var[vm_6]='
         name            = BR-SRV
         config_template = Alt-Server_10.1
         startup         = order=3,up=8,down=30
         network_1       = : BR-Net
-        boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/BR-SRV_DE39-2025_M2.qcow2
+        boot_disk_0     = /root/PVE_IMG/PVE_IMG/DE39-2025_M2/BR-SRV_DE39-2025_M2.qcow2
 '
 
 
