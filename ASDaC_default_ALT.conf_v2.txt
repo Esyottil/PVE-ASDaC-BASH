@@ -1,12 +1,4 @@
-﻿
-#>---------------------------------- Параметры конфигурации ----------------------------------<#
-
-#///::::::::::::::::::::::::::| Конфигурации ролей прав доступа |:::::::::::::::::::::::::::\\\#
-
-config_access_roles[Competitor_DE]='Pool.Audit VM.Audit VM.Console VM.PowerMgmt'
-
-
-#///%%%%%%%%%%%%%%%%%%% Конфигурации шаблонов настроек виртуальных машин %%%%%%%%%%%%%%%%%%%\\\#
+﻿config_access_roles[Competitor_DE]='Pool.Audit VM.Audit VM.Console VM.PowerMgmt'
 
 config_templates[Alt-JeOS]='
         templ_descr = Базовый шаблон для Альт p11 JeOS-systemd
@@ -49,9 +41,6 @@ config_templates[Alt-Workstation_10.1]='
         memory      = 3072
         boot_disk_0 = /root/PVE_IMG/PVE_IMG/Alt-Workstation_10.1.qcow2
 '
-
-
-#///=========================== Конфигурация варианта установки ===========================\\\#
 
 config_stand_1_var[stand_config]='
         description        = Базовый стенд демэкзамена КОД 09.02.06-2025. Модуль № 1 (Alt OS)
@@ -103,9 +92,6 @@ config_stand_1_var[vm_6]='
         startup         = order=3,up=8,down=30
         network_0       = : BR-Net
 '
-
-
-#///=========================== Конфигурация варианта установки ===========================\\\#
 
 config_stand_2_var[stand_config]='
         description        = Базовый стенд демэкзамена КОД 09.02.06-2025. Модуль № 2 (Alt OS)
@@ -166,6 +152,3 @@ config_stand_2_var[vm_6]='
         network_1       = : BR-Net
         boot_disk_0     = /root/PVE_IMG/PVE_IMG/DE39-2025_M2/BR-SRV_DE39-2025_M2.qcow2
 '
-
-
-#<------------------------------ Конец параметров конфигурации ------------------------------->#
