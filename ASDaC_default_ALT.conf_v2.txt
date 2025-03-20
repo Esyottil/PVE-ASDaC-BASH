@@ -68,40 +68,40 @@ config_stand_1_var[vm_1]='
         startup         = order=1,up=8,down=30
         firewall_opt    = { enable=1, dhcp=1 }
         network_0       = { bridge=inet, firewall=1 }
-        network_1       = 🖧: ISP-HQ
-        network_2       = 🖧: ISP-BR
+        network_1       = : ISP-HQ
+        network_2       = : ISP-BR
 '
 config_stand_1_var[vm_2]='
         name            = HQ-RTR
         config_template = Alt-Server_10.1
         startup         = order=2,up=8,down=20
-        network_0       = 🖧: ISP-HQ
-        network_1       = 🖧: HQ-Net
+        network_0       = : ISP-HQ
+        network_1       = : HQ-Net
 '
 config_stand_1_var[vm_3]='
         name            = HQ-SRV
         config_template = Alt-Server_10.1
         startup         = order=3,up=8,down=30
-        network_0       = {bridge="🖧: HQ-Net", tag=100}
+        network_0       = {bridge=": HQ-Net", tag=100}
 '
 config_stand_1_var[vm_4]='
         name            = HQ-CLI
         config_template = Alt-Workstation_10.1
         startup         = order=4,up=8,down=30
-        network_0       = {bridge="🖧: HQ-Net", tag=200}
+        network_0       = {bridge=": HQ-Net", tag=200}
 '
 config_stand_1_var[vm_5]='
         name            = BR-RTR
         config_template = Alt-Server_10.1
         startup         = order=2,up=8,down=20
-        network_0       = 🖧: ISP-BR
-        network_1       = 🖧: BR-Net
+        network_0       = : ISP-BR
+        network_1       = : BR-Net
 '
 config_stand_1_var[vm_6]='
         name            = BR-SRV
         config_template = Alt-Server_10.1
         startup         = order=3,up=8,down=30
-        network_0       = 🖧: BR-Net
+        network_0       = : BR-Net
 '
 
 
@@ -122,23 +122,23 @@ config_stand_2_var[vm_1]='
         startup         = order=1,up=8,down=30
         firewall_opt    = { enable=1, dhcp=1 }
         network_1       = { bridge=inet, firewall=1 }
-        network_2       = 🖧: ISP-HQ
-        network_3       = 🖧: ISP-BR
+        network_2       = : ISP-HQ
+        network_3       = : ISP-BR
         boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/ISP_DE39-2025_M2.qcow2
 '
 config_stand_2_var[vm_2]='
         name            = HQ-RTR
         config_template = Alt-Server_10.1
         startup         = order=2,up=8,down=20
-        network_1       = 🖧: ISP-HQ
-        network_2       = 🖧: HQ-Net
+        network_1       = : ISP-HQ
+        network_2       = : HQ-Net
         boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/HQ-RTR_ALT_DE39-2025_M2.qcow2
 '
 config_stand_2_var[vm_3]='
         name            = HQ-SRV
         config_template = Alt-Server_10.1
         startup         = order=3,up=8,down=30
-        network_1       = {bridge="🖧: HQ-Net", tag=100}
+        network_1       = {bridge=": HQ-Net", tag=100}
         boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/HQ-SRV_DE39-2025_M2.qcow2
         disk_1          = 1 GB
         disk_2          = 1 GB
@@ -148,22 +148,22 @@ config_stand_2_var[vm_4]='
         name            = HQ-CLI
         config_template = Alt-Workstation_10.1
         startup         = order=4,up=8,down=30
-        network_1       = {bridge="🖧: HQ-Net", tag=200}
+        network_1       = {bridge=": HQ-Net", tag=200}
         boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/HQ-CLI_DE39-2025_M2.qcow2
 '
 config_stand_2_var[vm_5]='
         name            = BR-RTR
         config_template = Alt-Server_10.1
         startup         = order=2,up=8,down=20
-        network_1       = 🖧: ISP-BR
-        network_2       = 🖧: BR-Net
+        network_1       = : ISP-BR
+        network_2       = : BR-Net
         boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/BR-RTR_ALT_DE39-2025_M2.qcow2
 '
 config_stand_2_var[vm_6]='
         name            = BR-SRV
         config_template = Alt-Server_10.1
         startup         = order=3,up=8,down=30
-        network_1       = 🖧: BR-Net
+        network_1       = : BR-Net
         boot_disk_0     = /root/PVE_IMG/DE39-2025_M2/BR-SRV_DE39-2025_M2.qcow2
 '
 
